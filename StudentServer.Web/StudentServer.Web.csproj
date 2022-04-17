@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>eaa4f35f-2ef7-41be-8cc7-be1f483e4340</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudentServer.Application\StudentServer.Application.csproj" />
+    <ProjectReference Include="..\StudentServer.Infra\StudentServer.Infra.csproj" />
+  </ItemGroup>
+
+</Project>
