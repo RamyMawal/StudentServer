@@ -13,23 +13,18 @@ pool:
 
 variables:
   solution: '**/*.sln'
+  testPath: './StudentServer.Tests.UnitTests/StudentServer.Tests.UnitTests'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@1
-
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: './StudentServer.Web/'
+    projects: '**/*.csproj'
+    
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-    projects: './StudentServer.Tests.UnitTests'
+    projects: testPath
     testRunTitle: 'Unit Tests'
