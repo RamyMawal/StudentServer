@@ -24,7 +24,6 @@ steps:
     
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'test'
-    projects: testPath
-    arguments: '--no-restore --verbosity normal'
-    testRunTitle: 'Unit Tests'
+    command: test
+    projects: '**/*Tests/*.csproj'
+    arguments: '--collect "Code coverage"'
