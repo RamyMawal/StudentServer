@@ -21,7 +21,7 @@ namespace StudentServer.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IList<StudentModel>>> GetAllStudents()
+        public async Task<ActionResult<IList<Student>>> GetAllStudents()
         {
             try
             {
@@ -38,7 +38,7 @@ namespace StudentServer.Web.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<StudentModel>> GetStudent(string id)
+        public async Task<ActionResult<Student>> GetStudent(string id)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace StudentServer.Web.Controllers
         }
 
         [HttpPost]
-        public async Task AddStudent(StudentModel student)
+        public async Task AddStudent(Student student)
         {
 
         }

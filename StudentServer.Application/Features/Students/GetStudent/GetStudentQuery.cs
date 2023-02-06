@@ -10,5 +10,5 @@ using System.Threading.Tasks;
 namespace StudentServer.Application.Features.Students
 {
     public record GetStudentQuery
-        (string StudentId): IGetStudentQuery , IRequest<StudentModel>;
+        (string StudentId): IGetStudentQuery , IRequest<Student>;
 }

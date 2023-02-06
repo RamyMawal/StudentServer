@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace StudentServer.Domain.Entities
 {
-    public class Student
+    public class StudentEntity
     {
-        private Student() { }
+        private StudentEntity() { }
 
-        public Student(
+        public StudentEntity(
             Guid id,
             string firstName,
             string lastName,
@@ -25,25 +25,12 @@ namespace StudentServer.Domain.Entities
         public Guid Id { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
-        public int Grade { get; private set; }
+        public float Average { get; private set; }
+        public List<float> Grades { get; private set; } 
         public Guid ClassId { get; private set; }
         public Class Class { get; private set; }
         public string ClassName { get; private set; }
 
-        public void ChangeName(string firstName, string lastName)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-        }
-
-        public void ChangeClass(Guid classId)
-        {
-            ClassId = classId;
-        }
-
-        public void ChangeGrade(int grade)
-        {
-            Grade = grade;
-        }
+        
     }
 }

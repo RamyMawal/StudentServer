@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace StudentServer.Infra.Persistence.Configurations
 {
-    public class StudentConfig : IEntityTypeConfiguration<Student>
+    public class StudentConfig : IEntityTypeConfiguration<StudentEntity>
     {
-        public void Configure(EntityTypeBuilder<Student> builder)
+        public void Configure(EntityTypeBuilder<StudentEntity> builder)
         {
             builder.HasKey(s => s.Id);
 
             builder.HasIndex(s => s.ClassId);
 
-            builder.HasIndex(s => s.Grade);
+            builder.HasIndex(s => s.Average);
 
             builder.HasOne<Class>()
                 .WithMany(c => c.Students)

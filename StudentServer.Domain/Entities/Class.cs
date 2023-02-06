@@ -29,7 +29,7 @@ namespace StudentServer.Domain.Entities
         public string Name { get; private set; }
         public string Code { get; private set; }
         public Subject Subject { get; private set; }
-        private IReadOnlyList<Student> _students { get; set; }
-        public IReadOnlyCollection<Student> Students => _students;
+        private List<StudentEntity> students { get; set; } = new();
+        public IReadOnlyCollection<StudentEntity> Students => students;
     }
 }

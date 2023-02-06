@@ -9,7 +9,7 @@ namespace StudentServer.Application.Contracts
 {
     public interface IStudentRepository
     {
-        Task<IEnumerable<Student>> GetStudentsInClassAsync(Guid classId);
-        Task<IEnumerable<Student>> SearchStudentByNameAsync(string name);
+        Task<IEnumerable<StudentEntity>> GetStudentsInClassAsync(Guid classId);
+        Task<IEnumerable<StudentEntity>> SearchStudentByNameAsync(string name);
     }
 }

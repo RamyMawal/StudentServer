@@ -14,6 +14,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentServer.Infra", "Stud
 		{F8E87728-3A04-4A9A-B419-85040D94DC60} = {F8E87728-3A04-4A9A-B419-85040D94DC60}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FFCC76CB-BD4F-4A8A-AF28-0E4B3ADAA5D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentServer.Tests.UnitTests", "StudentServer.Tests.UnitTests\StudentServer.Tests.UnitTests.csproj", "{6C7B0B6E-892F-418D-B43D-0CF27B93B0F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,9 +40,16 @@ Global
 		{B06EA313-B4C2-4F85-BE12-B2FC9AF938BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B06EA313-B4C2-4F85-BE12-B2FC9AF938BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B06EA313-B4C2-4F85-BE12-B2FC9AF938BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C7B0B6E-892F-418D-B43D-0CF27B93B0F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C7B0B6E-892F-418D-B43D-0CF27B93B0F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C7B0B6E-892F-418D-B43D-0CF27B93B0F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C7B0B6E-892F-418D-B43D-0CF27B93B0F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6C7B0B6E-892F-418D-B43D-0CF27B93B0F8} = {FFCC76CB-BD4F-4A8A-AF28-0E4B3ADAA5D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72030415-6039-48B4-925B-1F04E8B16370}

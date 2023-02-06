@@ -16,7 +16,7 @@ namespace StudentServer.Infra.Persistence
 
         }
 
-        public DbSet<Student> Students { get; set; }
+        public DbSet<StudentEntity> Students { get; set; }
         public DbSet<Class> Classes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

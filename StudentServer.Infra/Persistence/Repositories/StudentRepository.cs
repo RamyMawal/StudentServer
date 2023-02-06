@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace StudentServer.Infra.Persistence.Repositories
 {
-    public class StudentRepository : AsyncRepository<Student>, IStudentRepository
+    public class StudentRepository : AsyncRepository<StudentEntity>, IStudentRepository
     {
         private readonly AppDbContext _appDbContext;
         public StudentRepository(AppDbContext appDbContext) : base(appDbContext)
@@ -17,15 +17,15 @@ namespace StudentServer.Infra.Persistence.Repositories
             _appDbContext = appDbContext;
         }
 
-        public override async Task<Student> FindAsync(Guid id, bool includeRelated = false)
+        public override async Task<StudentEntity> FindAsync(Guid id, bool includeRelated = false)
         {
             return await _appDbContext.Students.Where(s => s.Id == id).Include(c => c.Class).FirstOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<Student>> GetStudentsInClassAsync(Guid classId)
+        public async Task<IEnumerable<StudentEntity>> GetStudentsInClassAsync(Guid classId)
             => await _appDbContext.Students.Where(s => s.ClassId == classId).ToListAsync();
 
-        public async Task<IEnumerable<Student>> SearchStudentByNameAsync(string name)
+        public async Task<IEnumerable<StudentEntity>> SearchStudentByNameAsync(string name)
             => await _appDbContext.Students
             .Where(s => 
             s.FirstName.Contains(name) || 

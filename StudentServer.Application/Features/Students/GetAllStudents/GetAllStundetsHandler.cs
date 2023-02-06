@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace StudentServer.Application.Features.Students
 {
-    public class GetAllStundetsHandler : IRequestHandler<GetAllStudentsQuery, IList<StudentModel>>
+    public class GetAllStundetsHandler : IRequestHandler<GetAllStudentsQuery, IList<Student>>
     {
-        public Task<IList<StudentModel>> Handle(GetAllStudentsQuery request, CancellationToken cancellationToken)
+        public Task<IList<Student>> Handle(GetAllStudentsQuery request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }

@@ -8,5 +8,5 @@ using System.Threading.Tasks;
 
 namespace StudentServer.Application.Features.Students
 {
-    public record GetAllStudentsQuery() : IRequest<IList<StudentModel>>;
+    public record GetAllStudentsQuery() : IRequest<IList<Student>>;
 }
