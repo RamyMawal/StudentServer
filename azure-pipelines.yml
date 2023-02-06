@@ -27,4 +27,5 @@ steps:
   inputs:
     command: 'test'
     projects: testPath
+    arguments: '--no-restore --verbosity normal'
     testRunTitle: 'Unit Tests'
